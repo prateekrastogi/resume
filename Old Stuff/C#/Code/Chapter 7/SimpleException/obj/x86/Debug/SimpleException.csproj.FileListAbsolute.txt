@@ -1,0 +1,5 @@
+E:\C#\Code\Chapter 7\SimpleException\bin\Debug\SimpleException.exe
+E:\C#\Code\Chapter 7\SimpleException\bin\Debug\SimpleException.pdb
+E:\C#\Code\Chapter 7\SimpleException\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\C#\Code\Chapter 7\SimpleException\obj\x86\Debug\SimpleException.exe
+E:\C#\Code\Chapter 7\SimpleException\obj\x86\Debug\SimpleException.pdb

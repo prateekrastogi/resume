@@ -1,0 +1,15 @@
+{
+    "contents" : "start <- function(){\n  library(RODBC)\n  library(mvbutils)\nsrcloc()\ntarloc()\n\n}",
+    "created" : 1369827027424.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3252406859",
+    "id" : "E2CB194F",
+    "lastKnownWriteTime" : 1374567910,
+    "path" : "E:/R/Pkg_mdt_extractor/R/Pkg_mdt_extractor.R",
+    "properties" : {
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}

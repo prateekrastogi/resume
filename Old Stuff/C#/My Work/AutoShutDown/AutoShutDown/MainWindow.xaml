@@ -1,0 +1,100 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Name="PC_Down" mc:Ignorable="d" x:Class="AutoShutDown.MainWindow" Loaded="Loadlist"
+        Title="PC Down" Height="739" Width="801" ResizeMode="CanMinimize" Visibility="Visible" OpacityMask="Black" HorizontalAlignment="Center" Icon="icon.ico" Foreground="Black" WindowStartupLocation="CenterScreen" VerticalAlignment="Center" Topmost="True">
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="#FFEAEBEE"/>
+            <GradientStop Color="#FFFFBE00" Offset="1"/>
+        </RadialGradientBrush>
+    </Window.Background>
+    <Grid Margin="0,-61,0.4,0" Height="687" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="650*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="392*"/>
+            <ColumnDefinition Width="225*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="40*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Margin="174,35,58.8,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="384" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontFamily="Meiryo UI" FontSize="18" FontWeight="Bold" Grid.Row="1">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GrayTextColorKey}}"/>
+            </TextBlock.Foreground><Run Language="en-in" Text="&#x9;   "/><Run Text="Select"/><Run Language="en-in" Text=" "/><Run Text="Process"/></TextBlock>
+        <ListBox x:Name="list"  Margin="174,0,0,203.2" Width="304" HorizontalAlignment="Left" RenderTransformOrigin="0.489,0.542" Grid.ColumnSpan="2" Grid.Row="1" Height="374" VerticalAlignment="Bottom"/>
+        <Button x:Name="pset_btn" Click="PsetClick"  Content="Set" Grid.Column="2" HorizontalAlignment="Left" Margin="24.2,493.2,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" RenderTransformOrigin="0.451,0.602" Height="25" ToolTip="Press if you want to set CPU consumption conditions."/>
+        <Button x:Name="start_btn" Click="StartClick" Grid.ColumnSpan="2" Content="Start" HorizontalAlignment="Left" Margin="291,655,0,-29.6" Width="131" Height="25" VerticalAlignment="Top" Grid.Row="1" ToolTip="Start watching for one or more conditions you've set."/>
+        <Button x:Name="select_btn" Click="SelectClick" Content="Select" Grid.Column="2" HorizontalAlignment="Left" Margin="24.2,229.2,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" ToolTip="Select any process from the list and then press it."/>
+        <Button x:Name="sset_btn" Click="SsetClick" Content="Set" Grid.Column="2" HorizontalAlignment="Left" Margin="24.2,622.2,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" ToolTip="Press it for setting the simple timer for executing power options. "/>
+        <TextBlock Margin="34,688,15.4,-75.6" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" FontSize="12" HorizontalAlignment="Center" Width="697" Grid.Row="1" Height="38"><Run Language="en-in" Text="&#x9;"/><Run FontWeight="Bold" Language="en-in" Text="Note"/><Run Language="en-in" Text=":- If multiple options are set, then the event which is first triggered will be the final action.            &#x9;            &#x9;            &#x9;            If the process selected is not running in the machine for &gt;5 minutes, then selected action will initiate automatically.&#x9;"/><LineBreak/><Run Language="en-in"/><LineBreak/><Run Language="en-in"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="147,624.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" RenderTransformOrigin="0.506,2.13" Grid.ColumnSpan="2" Grid.Row="1"><Run Language="en-in" Text="  after "/><Run Text=" "/><InlineUIContainer>
+        		<TextBox x:Name="sh" Height="20" TextWrapping="Wrap" Width="40" TextChanged="TextBox_TextChanged_4" Foreground="Red" MaxLines="1"/>
+        	</InlineUIContainer><Run Language="en-in" Text="  hours  "/><InlineUIContainer>
+        		<TextBox x:Name="sm" Height="20" TextWrapping="Wrap" Width="40" Foreground="Red" MaxLines="1" TextChanged="sm_TextChanged"/>
+        	</InlineUIContainer><Run Language="en-in" Text="  minutes"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="22,507.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="457" RenderTransformOrigin="0.495,-1.343" Grid.ColumnSpan="2" Grid.Row="1"><Run Language="en-in" Text="below  "/><InlineUIContainer>
+        		<TextBox x:Name="pp" Height="20" TextWrapping="Wrap" Width="40" TextChanged="TextBox_TextChanged_1" VerticalAlignment="Top" MaxLines="1" Foreground="Red"/>
+        	</InlineUIContainer><Run Language="en-in" Text="  % for more than  "/><InlineUIContainer>
+        		<TextBox x:Name="ph" Height="20" TextWrapping="Wrap" Width="40" VerticalAlignment="Top" MaxLines="1" TextChanged="TextBox_TextChanged_5" Foreground="Red"/>
+        	</InlineUIContainer><Run Language="en-in" Text="  hours  "/><InlineUIContainer>
+        		<TextBox x:Name="pm" Height="20" TextWrapping="Wrap" Width="40" TextChanged="TextBox_TextChanged_3" VerticalAlignment="Top" MaxLines="1" Foreground="Red"/>
+        	</InlineUIContainer><Run Language="en-in" Text="  minutes"/></TextBlock>
+        <ComboBox x:Name="Dd_list" Margin="288,544.2,182.8,0" Grid.Row="1" VerticalAlignment="Top" Height="25" SelectedIndex="0" Grid.ColumnSpan="2">
+            <ListBoxItem Content="Data Download"/>
+            <ListBoxItem Content="Data Upload"/>
+            <ListBoxItem Content="Total Data " Width="130" />
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="51,547.2,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Grid.Column="1" Grid.ColumnSpan="2"><Run Language="en-in" Text="rate falls "/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="22,577.2,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"><Run Language="en-in" Text="below"/></TextBlock>
+        <Button x:Name="nset_btn" Click="NSetClick" Content="Set" Grid.Column="2" HorizontalAlignment="Left" Margin="24.2,560,0,64.4" Grid.Row="1" Width="75" ToolTip="Press it if you want to set the conditions on the basis of data rate."/>
+        <Button x:Name="abt_btn" BorderThickness="0"  
+    Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Content="About" Grid.Column="3" HorizontalAlignment="Left" Height="18" Margin="1.6,703,0,-70.6" Grid.Row="1" VerticalAlignment="Top" Width="38" Click="AbtClick" Background="#FFFFBE00" Foreground="#FF6F6F6F" FontSize="12" FontWeight="Bold" ToolTip="Know about the program." Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cpulist" HorizontalAlignment="Left" Margin="22,475.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Height="25" SelectedIndex="0">
+            <ListBoxItem Content="Shut Down"/>
+            <ListBoxItem Content="Sleep"/>
+            <ListBoxItem Content="Hibernate"/>
+            <ListBoxItem Content="Log Off"/>
+            <ListBoxItem Content="Restart"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="152,478.2,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="328" Grid.ColumnSpan="2">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.393"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="en-in" Text=" when selected process CPU consumption falls                             "/></TextBlock>
+        <ComboBox x:Name="netlist" HorizontalAlignment="Left" Margin="22,547.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" SelectedIndex="0" Height="25">
+            <ListBoxItem Content="Shut Down"/>
+            <ListBoxItem Content="Sleep"/>
+            <ListBoxItem Content="Hibernate"/>
+            <ListBoxItem Content="Log Off"/>
+            <ListBoxItem Content="Restart"/>
+        </ComboBox>
+        <TextBlock Margin="155,547.2,108,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.512,1.842"><Run Language="en-in" Text="when computer's"/></TextBlock>
+        <TextBox x:Name="drbox" HorizontalAlignment="Left" Height="20" Margin="72,578.2,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Foreground="Red"/>
+        <ComboBox x:Name="uindex" HorizontalAlignment="Left" Margin="117,577.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="62" Height="25" SelectedIndex="0" ClipToBounds="True">
+            <ListBoxItem Content="KB/s"/>
+            <ListBoxItem Content="MB/s"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="184,574.2,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="379"><Run Language="en-in" Text="for more than  "/><Run Text=" "/><InlineUIContainer>
+        		<TextBox x:Name="nhbox" Height="20" InputMethod.IsInputMethodEnabled="False" TextWrapping="Wrap" UseLayoutRounding="True" Width="40" d:DesignUseLayoutRounding="True" Foreground="Red"/>
+        	</InlineUIContainer><Run Language="en-in" Text="  h"/><Run Language="en-in" Text="ours  "/><InlineUIContainer>
+        		<TextBox x:Name="nmbox" Height="20" TextWrapping="Wrap" Width="40" TextChanged="TextBox_TextChanged_9" Foreground="Red"/>
+        	</InlineUIContainer><Run Text=" "/><Run Language="en-in" Text=" minutes"/></TextBlock>
+        <ComboBox x:Name="timeindex" SelectedIndex="0" Margin="22,625.2,250,0" Grid.Row="1" Height="25" VerticalAlignment="Top">
+            <ListBoxItem Content="Shut Down"/>
+            <ListBoxItem Content="Sleep"/>
+            <ListBoxItem Content="Hibernate"/>
+            <ListBoxItem Content="Log Off"/>
+            <ListBoxItem Content="Restart"/>
+        </ComboBox>
+        <Button x:Name="reset_btn" Content="Reset" HorizontalAlignment="Left" Margin="0,23,0,0" VerticalAlignment="Top" Width="57" Background="#FFFFBE00" Foreground="#FF707070" FontWeight="Bold" BorderBrush="{x:Null}" Height="27" FontSize="18" Click="reset_btn_Click" Grid.Row="1" ToolTip="Press it for resetting the conditions."/>
+    </Grid>
+
+</Window>

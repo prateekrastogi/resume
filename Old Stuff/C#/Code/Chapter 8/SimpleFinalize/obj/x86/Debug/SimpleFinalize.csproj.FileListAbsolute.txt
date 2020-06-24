@@ -1,0 +1,5 @@
+E:\C#\Code\Chapter 8\SimpleFinalize\bin\Debug\SimpleFinalize.exe
+E:\C#\Code\Chapter 8\SimpleFinalize\bin\Debug\SimpleFinalize.pdb
+E:\C#\Code\Chapter 8\SimpleFinalize\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\C#\Code\Chapter 8\SimpleFinalize\obj\x86\Debug\SimpleFinalize.exe
+E:\C#\Code\Chapter 8\SimpleFinalize\obj\x86\Debug\SimpleFinalize.pdb

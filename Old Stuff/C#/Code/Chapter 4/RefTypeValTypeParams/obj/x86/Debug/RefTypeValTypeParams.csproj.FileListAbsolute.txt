@@ -1,0 +1,5 @@
+D:\C#\Code\Chapter 4\RefTypeValTypeParams\bin\Debug\RefTypeValTypeParams.exe
+D:\C#\Code\Chapter 4\RefTypeValTypeParams\bin\Debug\RefTypeValTypeParams.pdb
+D:\C#\Code\Chapter 4\RefTypeValTypeParams\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\C#\Code\Chapter 4\RefTypeValTypeParams\obj\x86\Debug\RefTypeValTypeParams.exe
+D:\C#\Code\Chapter 4\RefTypeValTypeParams\obj\x86\Debug\RefTypeValTypeParams.pdb

@@ -1,0 +1,5 @@
+D:\C#\Code\Chapter 3\FunWithStrings\bin\Debug\FunWithStrings.exe
+D:\C#\Code\Chapter 3\FunWithStrings\bin\Debug\FunWithStrings.pdb
+D:\C#\Code\Chapter 3\FunWithStrings\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\C#\Code\Chapter 3\FunWithStrings\obj\x86\Debug\FunWithStrings.exe
+D:\C#\Code\Chapter 3\FunWithStrings\obj\x86\Debug\FunWithStrings.pdb

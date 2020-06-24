@@ -1,0 +1,5 @@
+D:\C#\SPOJ And Algorithms\6\6\bin\Debug\6.exe
+D:\C#\SPOJ And Algorithms\6\6\bin\Debug\6.pdb
+D:\C#\SPOJ And Algorithms\6\6\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\C#\SPOJ And Algorithms\6\6\obj\x86\Debug\6.exe
+D:\C#\SPOJ And Algorithms\6\6\obj\x86\Debug\6.pdb

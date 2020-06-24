@@ -1,0 +1,5 @@
+E:\C#\Code\Chapter 6\Employees\bin\Debug\Employees.exe
+E:\C#\Code\Chapter 6\Employees\bin\Debug\Employees.pdb
+E:\C#\Code\Chapter 6\Employees\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\C#\Code\Chapter 6\Employees\obj\x86\Debug\Employees.exe
+E:\C#\Code\Chapter 6\Employees\obj\x86\Debug\Employees.pdb

@@ -1,0 +1,5 @@
+D:\C#\Code\Chapter 4\FunWithArrays\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\C#\Code\Chapter 4\FunWithArrays\bin\Debug\FunWithArrays.exe
+D:\C#\Code\Chapter 4\FunWithArrays\bin\Debug\FunWithArrays.pdb
+D:\C#\Code\Chapter 4\FunWithArrays\obj\x86\Debug\FunWithArrays.exe
+D:\C#\Code\Chapter 4\FunWithArrays\obj\x86\Debug\FunWithArrays.pdb

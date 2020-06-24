@@ -1,0 +1,5 @@
+D:\C#\Code\Chapter 4\ValueAndReferenceTypes\bin\Debug\ValueAndReferenceTypes.exe
+D:\C#\Code\Chapter 4\ValueAndReferenceTypes\bin\Debug\ValueAndReferenceTypes.pdb
+D:\C#\Code\Chapter 4\ValueAndReferenceTypes\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\C#\Code\Chapter 4\ValueAndReferenceTypes\obj\x86\Debug\ValueAndReferenceTypes.exe
+D:\C#\Code\Chapter 4\ValueAndReferenceTypes\obj\x86\Debug\ValueAndReferenceTypes.pdb

@@ -1,0 +1,5 @@
+E:\C#\Code\Chapter 5\ObjectInitializers\bin\Debug\ObjectInitializers.exe
+E:\C#\Code\Chapter 5\ObjectInitializers\bin\Debug\ObjectInitializers.pdb
+E:\C#\Code\Chapter 5\ObjectInitializers\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\C#\Code\Chapter 5\ObjectInitializers\obj\x86\Debug\ObjectInitializers.exe
+E:\C#\Code\Chapter 5\ObjectInitializers\obj\x86\Debug\ObjectInitializers.pdb

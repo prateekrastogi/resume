@@ -1,0 +1,5 @@
+D:\C#\Code\Chapter 3\IterationsAndDecisions\bin\Debug\IterationsAndDecisions.exe
+D:\C#\Code\Chapter 3\IterationsAndDecisions\bin\Debug\IterationsAndDecisions.pdb
+D:\C#\Code\Chapter 3\IterationsAndDecisions\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\C#\Code\Chapter 3\IterationsAndDecisions\obj\x86\Debug\IterationsAndDecisions.exe
+D:\C#\Code\Chapter 3\IterationsAndDecisions\obj\x86\Debug\IterationsAndDecisions.pdb

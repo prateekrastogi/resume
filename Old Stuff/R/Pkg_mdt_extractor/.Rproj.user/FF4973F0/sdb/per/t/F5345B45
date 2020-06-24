@@ -1,0 +1,16 @@
+{
+    "contents" : "pkgexplore<-function(path){\n  files<-dir(path,recursive=F,full.names=TRUE)\n  dindex<-grep(\"DESCRIPTION\",files)\n  namespace<-files[grep(\"NAMESPACE\",files)]\n  nmsexplore(namespace)\n  if(length(dindex)>1) desexplore(files[dindex[2]]) else if(length(dindex)==1) desexplore(files[dindex[1]])\n  rfiles<-dir(path,pattern=\"^R$\",recursive=F)\n  rpath<-(file.path(path,(setdiff(rfiles,setdiff(rfiles,c('R'))))))# To find the r source directory\n  if(length(rpath)>1 && length(dindex)>1 ){ srcexplore(rpath[2],files[dindex[2]],namespace)}\nelse if(length(rpath)==1 && length(dindex)>1){ srcexplore(rpath[1],files[dindex[2]],namespace)}\n  else if(length(rpath)>1 && length(dindex)==1){ srcexplore(rpath[2],files[dindex[1]],namespace)}\n  else if(length(rpath)==1 && length(dindex)==1){ srcexplore(rpath[1],files[dindex[1]],namespace)}\n  #rpath<-path\n} \n\ndesexplore <- function(dpath){\n #print(dpath,rpath)\n  #print(dpath)\n    #print(readLines(dpath))\n      fvector<-finalvector(dpath)\n     # print(fvector)\n     dframepkgname(fvector)\n      dframepackage(fvector)\n      #print(dependency(fvector))\n     \n   \n      \n }\nnmsexplore<-function(namespace)\n{\n  #nmsres(namespace)\n}\n# Adds each identified elements of the description in the vector\nfinalvector<-function(despath)\n{\n  dpath<-despath\n  fvector<-NULL #for separating each specific fields of the description file and storing it in a separate index\n  temp <- (grep(\"Package:|Priority:|Version:|Date:|Title:|Author:|Maintainer:|Depends:|Description:|License:|URL:|Packaged:|Authors@R:|Encoding:|Copyright:|SystemRequirements:|Imports:|Suggests:|Enhances:|Revision:|BugReports:|biocViews:|BundleDescription:|Collate\\\\.unix:|Collate\\\\.windows:|Collate:|KeepSource:|LazyData:|LazyLoad:|ByteCompile:|ZipData:|Biarch:|BuildVignettes:|VignetteBuilder:|NeedsCompilation:|OS_type:|Classification\\\\/ACM:|Classification\\\\/JEL:|Classification\\\\/MSC:|Language:|Built:|Note:|Contact:|MailingList:|Repository:|Date\\\\/Publication:|Architecture:|Archs:|Requires:|Contains:|Type:\",readLines(dpath)))  \n  if(length(temp)>=1)\n  {\n    if(length(temp>1))\n    {      for(i in 1:(length(temp)-1))\n    {\n      fvector<-c(fvector,(paste(readLines(dpath)[temp[i]:((temp[i+1])-1)],collapse=\"\")))   #for collating description        \n    }\n    }\n    #for collating last line of the description\n    fvector<-c(fvector,(paste(readLines(dpath)[temp[length(temp)]:length(readLines(dpath))],collapse=\"\")))}\n    \n}\n",
+    "created" : 1370004122025.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3626229767",
+    "id" : "F5345B45",
+    "lastKnownWriteTime" : 1374567906,
+    "path" : "E:/R/Pkg_mdt_extractor/R/Exploration.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}
